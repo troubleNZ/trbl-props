@@ -1,5 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-
 local Things = {}
 local i = 0
 
@@ -37,7 +35,6 @@ end)
 
 -- // Events
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerData = QBCore.Functions.GetPlayerData()
     isLoggedIn = true
 end)
 
@@ -49,7 +46,6 @@ end)
 RegisterNetEvent('onResourceStart', function(resource)
 	if resource == GetCurrentResourceName() then
 		Wait(200)
-        PlayerData = QBCore.Functions.GetPlayerData()
 		isLoggedIn = true
         if Config.Verbose then print("^5@trbl-props^7: ^3Resource Started ^7") end
 	end
