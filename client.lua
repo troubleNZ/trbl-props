@@ -16,13 +16,13 @@ local function CreateProps()
 end
 
 local function UnloadProps()
-	if Config.Verbose then print("^5trbl-props^7: ^3UnloadProps^7() ^2Clearing area of spawned props^7") end
+	if Config.Verbose then print("^5trbl-props^7: ^3Clearing area of spawned props^7") end
     for i = 1, #Things do  destroyModel(GetEntityModel(GetHashKey(i.prop))) DeleteObject(Things[i]) end
     Things = {}
 end
 
 function destroyModel(model) 
-    if Config.Verbose then print("^55trbl-props^7: ^Destroy Model^7: '^6"..model.."^7'") end 
+    if Config.Verbose then print("^5trbl-props^7: ^Destroy Model^7: '^6"..model.."^7'") end 
     SetModelAsNoLongerNeeded(model) 
 end
 
@@ -47,7 +47,7 @@ RegisterNetEvent('onResourceStart', function(resource)
 	if resource == GetCurrentResourceName() then
 		Wait(200)
 		isLoggedIn = true
-        if Config.Verbose then print("^5@trbl-props^7: ^3Resource Started ^7") end
+        if Config.Verbose then print("^5trbl-props^7: ^3Resource Started ^7") end
 	end
 end)
 
